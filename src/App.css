@@ -1,0 +1,47 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set body full height and apply a simple font */
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Container styling for the app */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Style for the editor and preview panels */
+.panel {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Border for separation */
+.panel.editor {
+  border-right: 1px solid #ddd;
+}
+
+/* Responsive adjustments: stack panels vertically on small screens */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .panel.editor {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* Styling for toolbar (if custom styling is needed) */
+.toolbar {
+  margin-bottom: 10px;
+}
